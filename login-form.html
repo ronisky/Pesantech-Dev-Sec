@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="https://pbs.twimg.com/profile_images/1497414882161217545/elSo81WH_400x400.jpg">
+    <title>Login Form | Pesantech ID</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+    body {
+        background: linear-gradient(90deg, #4bb7a0 0%, #184648 100%);
+    }
+
+    .login {
+        width: 360px;
+        padding: 8% 0 0;
+        margin: auto;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    .form {
+        position: relative;
+        z-index: 1;
+        background: #FFFFFF;
+        border-radius: 10px;
+        max-width: 360px;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+    }
+
+    .form input {
+        outline: 0;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    .form input:focus {
+        background: #dbdbdb;
+    }
+
+    .form button {
+        font-family: 'Comfortaa', cursive;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4bb7b7;
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+    .form button:active {
+        background: #2b8686;
+    }
+
+    .form span {
+        font-size: 45px;
+        color: #4bb7b7;
+    }
+
+</style>
+
+<body>
+    <div class="login card">
+        <div class="form">
+            <form class="login-form">
+                <span class="material-icons">Pesantech</span>
+                <input type="text" placeholder="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    required />
+                <input type="password" placeholder="password" required />
+                <button>login</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    window.oncontextmenu = function () {
+        return false;
+    }
+    // source key code : https://gist.github.com/lbj96347/2567917
+
+    $(document).on('keydown', function (event) {
+        if (event.keyCode == 123) {
+            alert('Entered F12');
+            return false;
+        } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+            alert('Entered ctrl+shift+i')
+            return false; //Prevent from ctrl+shift+i
+        } else if (event.ctrlKey && event.keyCode == 73) {
+            alert('Entered ctrl+shift+i')
+            return false; //Prevent from ctrl+shift+i
+        } else if (event.ctrlKey && event.keyCode == 74) {
+            alert('Entered ctrl+shift+j')
+            return false; //Prevent from ctrl+shift+j
+        }
+    });
+
+    $(document).on("contextmenu", function (e) {
+        alert('Right Click Not Allowed')
+        e.preventDefault();
+    });
+
+</script>
+
+</html>

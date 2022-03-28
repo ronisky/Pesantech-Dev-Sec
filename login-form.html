@@ -72,7 +72,7 @@
     }
 
     .form span {
-        font-size: 45px;
+        font-size: 35px;
         color: #4bb7b7;
     }
 
@@ -82,7 +82,7 @@
     <div class="login card">
         <div class="form">
             <form class="login-form">
-                <span class="material-icons">Pesantech</span>
+                <span class="material-icons">Pesantech ID</span>
                 <input type="text" placeholder="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                     required />
                 <input type="password" placeholder="password" required />
@@ -99,18 +99,22 @@
     // source key code : https://gist.github.com/lbj96347/2567917
 
     $(document).on('keydown', function (event) {
-        if (event.keyCode == 123) {
-            alert('Entered F12');
-            return false;
+         if (event.keyCode == 123) {
+            return false; //Prevent from f12
         } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
-            alert('Entered ctrl+shift+i')
             return false; //Prevent from ctrl+shift+i
-        } else if (event.ctrlKey && event.keyCode == 73) {
-            alert('Entered ctrl+shift+i')
-            return false; //Prevent from ctrl+shift+i
-        } else if (event.ctrlKey && event.keyCode == 74) {
-            alert('Entered ctrl+shift+j')
-            return false; //Prevent from ctrl+shift+j
+        } else if (event.ctrlKey &&
+            event.keyCode === 67 ||
+            event.keyCode === 86 ||
+            event.keyCode === 85 ||
+            event.keyCode === 117) {
+            return false;
+            /*
+            67  = c
+            86  = v
+            85  = u
+            117 = f6
+            */
         }
     });
 
